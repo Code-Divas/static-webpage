@@ -1,19 +1,20 @@
 import Navbar from './components/Navbar';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import Poppins from 'typeface-poppins';
 import Portfolio from './sections/Portfolio';
 import About from './sections/About';
 import Contact from './sections/Contact';
+import 'fontsource-josefin-sans';
 
-const THEME = createMuiTheme({
+const theme = createMuiTheme({
 	typography: {
-		fontFamily: Poppins
+		fontFamily: 'Josefin Sans',
+		fontSize: 14
 	}
 });
 
 const App = () => {
 	return (
-		<ThemeProvider theme={THEME}>
+		<ThemeProvider theme={theme}>
 			<Navbar />
 			<About />
 			<Portfolio />
