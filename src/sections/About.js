@@ -2,17 +2,45 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+import picture from '../assets/picture.jpg';
 import { Element } from 'react-scroll';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
+import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
+import ReportProblemIcon from '@material-ui/icons/ReportProblem';
+import PublicIcon from '@material-ui/icons/Public';
 
 const useStyles = makeStyles({
 	container: {
-		marginTop: 50,
-		padding: 40,
+		marginTop: '4rem',
+		padding: '2rem',
 		display: 'flex',
 		flexDirection: 'column'
 	},
-	paragraph: {
-		marginBottom: 50
+	icon: {
+		fontSize: '5rem'
+	},
+	iconWrapper: {
+		display: 'flex',
+		flexDirection: 'row',
+		alignItems: 'center',
+		justifyContent: 'space-around',
+		padding: '2rem'
+	},
+	picture: {
+		width: '100%',
+		borderRadius: '50%'
+	},
+	picContainer: {
+		padding: '2rem'
+	},
+	wrapper: {
+		display: 'flex',
+		flexDirection: 'row',
+		alignItems: 'center'
+	},
+	section: {
+		textAlign: 'center'
 	}
 });
 
@@ -21,38 +49,33 @@ const About = () => {
 	return (
 		<Element id="about">
 			<Container className={classes.container}>
-				<Typography variant="h5">About</Typography>
-				<Typography className={classes.paragraph} variant="body1">
-					Roof party prism synth dolore. Snackwave wolf vaporware sustainable. Labore raw denim do consequat.
-					Aute small batch meditation forage lumbersexual microdosing id. Brooklyn art party excepteur lyft
-					8-bit est roof party neutra four loko. Est duis poke, neutra tote bag tilde pabst vape single-origin
-					coffee deserunt paleo. Organic quinoa stumptown, try-hard XOXO pok pok mustache bicycle rights kogi
-					listicle veniam tumeric cupidatat humblebrag poke. Sint iceland poke shoreditch, post-ironic
-					gastropub aute pour-over labore. Dreamcatcher ut 90's ugh.
-				</Typography>
-				<Typography className={classes.paragraph} variant="body1">
-					Fixie ea pabst, raclette bushwick food truck aesthetic umami. Tbh poke PBR&B keffiyeh ullamco dolor
-					nostrud cupidatat ut mollit. Wayfarers live-edge adipisicing, yr lumbersexual pariatur in aesthetic.
-					Minim crucifix cornhole aliqua. Normcore in nostrud consectetur tacos everyday carry butcher.
-					Pour-over listicle selvage organic kale chips blog hella. Dreamcatcher leggings meditation marfa
-					YOLO, qui waistcoat ut cillum raw denim glossier freegan. Adaptogen godard eiusmod la croix 3 wolf
-					moon, fashion axe quis gluten-free. Narwhal trust fund normcore glossier. Poke irony VHS food truck
-					squid literally labore chia man bun taxidermy blue bottle ut.
-				</Typography>
-				<Typography className={classes.paragraph} variant="body1">
-					Direct trade narwhal trust fund vegan cliche duis et vape vaporware thundercats. Glossier vaporware
-					sartorial stumptown tumblr fingerstache labore raclette bicycle rights brunch jean shorts
-					exercitation photo booth incididunt ex. Forage jianbing non, locavore sriracha scenester tumeric
-					offal flannel franzen hell of tattooed meh hexagon. Semiotics ugh schlitz drinking vinegar. Occaecat
-					officia biodiesel irony, banh mi raclette exercitation duis ennui. Literally art party +1 typewriter
-					man bun, etsy iPhone edison bulb velit consequat bushwick pinterest aesthetic.
-				</Typography>
-				<Typography className={classes.paragraph} variant="body1">
-					Cardigan glossier bespoke austin eiusmod wolf aute yr meditation shoreditch letterpress etsy
-					incididunt anim aliquip. Wayfarers pabst glossier, edison bulb bespoke voluptate gastropub blog
-					distillery normcore. Af aesthetic eiusmod palo santo poke. Sartorial salvia vaporware, man braid
-					kinfolk blog dreamcatcher locavore scenester pop-up pabst lumbersexual shabby chic.
-				</Typography>
+				<Grid container className={classes.wrapper}>
+					<Grid item sm={4} className={classes.picContainer}>
+						<img className={classes.picture} src={picture} alt="aline" />
+					</Grid>
+					<Grid item sm={8} className={classes.section}>
+						<Typography>(Click to see more!)</Typography>
+						<div className={classes.iconWrapper}>
+							<MenuBookIcon className={classes.icon} color="primary" />
+							<DirectionsRunIcon className={classes.icon} color="primary" />
+							<ReportProblemIcon className={classes.icon} color="primary" />
+							<PublicIcon className={classes.icon} color="primary" />
+						</div>
+					</Grid>
+					<Grid item sm={12}>
+						<Typography paragraph variant="h4" color="primary">
+							About
+						</Typography>
+						<Typography paragraph variant="body1">
+							I started my development career in 2020 and before that worked as an architect. I’m
+							currently assigned as Team Leader and Front-end React Developer in a healthcare startup,
+							using Jira as the software to create and manage sprints. My passion is working with
+							designers to develop applications with better User Experience. As Team Leader, I work
+							closely with designers, back-end developers and interns. I am a proactive, a fast learner
+							and have good team spirit. Fluent in English and Portuguese with advanced Italian.
+						</Typography>
+					</Grid>
+				</Grid>
 			</Container>
 		</Element>
 	);

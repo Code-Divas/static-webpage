@@ -6,69 +6,67 @@ import { Link } from 'react-scroll';
 import 'fontsource-josefin-sans';
 
 const useStyles = makeStyles((theme) => ({
-	navbar: {
-		flexGrow: 1,
-		backgroundColor: '#ce6262',
-		color: '#fff'
-	},
 	toolbar: {
 		justifyContent: 'center'
 	},
 	link: {
 		marginRight: 10,
-		marginLeft: 10
+		marginLeft: 10,
+		'&:hover': {
+			cursor: 'pointer'
+		},
+		fontSize: '1.3rem'
 	}
 }));
 
-export default function ButtonAppBar() {
+export default function Navbar() {
 	const classes = useStyles();
+
 	// const scrollToTop = () => {
 	// 	scroll.scrollToTop();
 	// };
 	return (
-		<div>
-			<AppBar className={classes.navbar} position="fixed">
-				<Toolbar className={classes.toolbar}>
-					<Link
-						activeClass="active"
-						to="about"
-						spy={true}
-						smooth={true}
-						offset={-70}
-						style={{ fontFamily: 'Josefin Sans' }}
-						duration={500}
-						className={classes.link}
-					>
-						About
-					</Link>
-					<Link
-						activeClass="active"
-						to="portfolio"
-						spy={true}
-						smooth={true}
-						offset={-70}
-						style={{ fontFamily: 'Josefin Sans' }}
-						duration={500}
-						className={classes.link}
-					>
-						Portfolio
-					</Link>
-					<Link
-						activeClass="active"
-						to="contact"
-						spy={true}
-						smooth={true}
-						style={{ fontFamily: 'Josefin Sans' }}
-						offset={-70}
-						duration={500}
-						className={classes.link}
-					>
-						Contact
-					</Link>
+		<AppBar color="primary" position="fixed">
+			<Toolbar className={classes.toolbar}>
+				<Link
+					activeClass="active"
+					to="about"
+					spy={true}
+					smooth={true}
+					offset={-70}
+					style={{ fontFamily: 'Josefin Sans' }}
+					duration={500}
+					className={classes.link}
+				>
+					About
+				</Link>
+				<Link
+					activeClass="active"
+					to="portfolio"
+					spy={true}
+					smooth={true}
+					offset={-70}
+					style={{ fontFamily: 'Josefin Sans' }}
+					duration={500}
+					className={classes.link}
+				>
+					Portfolio
+				</Link>
+				<Link
+					activeClass="active"
+					to="contact"
+					spy={true}
+					smooth={true}
+					style={{ fontFamily: 'Josefin Sans' }}
+					offset={-70}
+					duration={500}
+					className={classes.link}
+				>
+					Contact
+				</Link>
 
-					{/* <Typography>Hello</Typography> */}
-				</Toolbar>
-			</AppBar>
-		</div>
+				{/* <Typography>Hello</Typography> */}
+			</Toolbar>
+		</AppBar>
 	);
 }
