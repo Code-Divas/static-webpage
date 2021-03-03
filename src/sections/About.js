@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
+import IconButton from '@material-ui/core/IconButton';
 import picture from '../assets/picture.jpg';
 import { Element } from 'react-scroll';
+import DialogSkill from '../components/DialogSkill';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
 import ReportProblemIcon from '@material-ui/icons/ReportProblem';
@@ -46,20 +48,52 @@ const useStyles = makeStyles({
 
 const About = () => {
 	const classes = useStyles();
+	const [ isDialogOpen, setIsDialogOpen ] = useState(false);
+	const [ skill, setSkill ] = useState('');
 	return (
 		<Element id="about">
 			<Container className={classes.container}>
 				<Grid container className={classes.wrapper}>
-					<Grid item sm={4} className={classes.picContainer}>
+					<Grid item sm={6} xs={12} className={classes.picContainer}>
 						<img className={classes.picture} src={picture} alt="aline" />
 					</Grid>
-					<Grid item sm={8} className={classes.section}>
+					<Grid item sm={6} xs={12} className={classes.section}>
 						<Typography>(Click to see more!)</Typography>
 						<div className={classes.iconWrapper}>
-							<MenuBookIcon className={classes.icon} color="primary" />
-							<DirectionsRunIcon className={classes.icon} color="primary" />
-							<ReportProblemIcon className={classes.icon} color="primary" />
-							<PublicIcon className={classes.icon} color="primary" />
+							<IconButton
+								onClick={() => {
+									setIsDialogOpen(true);
+									setSkill('Problem Solver');
+								}}
+							>
+								<ReportProblemIcon className={classes.icon} color="primary" />
+							</IconButton>
+							<IconButton
+								onClick={() => {
+									setIsDialogOpen(true);
+									setSkill('Global Perspective');
+								}}
+							>
+								<PublicIcon className={classes.icon} color="primary" />
+							</IconButton>
+						</div>
+						<div className={classes.iconWrapper}>
+							<IconButton
+								onClick={() => {
+									setIsDialogOpen(true);
+									setSkill('Fast Learner');
+								}}
+							>
+								<MenuBookIcon className={classes.icon} color="primary" />
+							</IconButton>
+							<IconButton
+								onClick={() => {
+									setIsDialogOpen(true);
+									setSkill('Proactive');
+								}}
+							>
+								<DirectionsRunIcon className={classes.icon} color="primary" />
+							</IconButton>
 						</div>
 					</Grid>
 					<Grid item sm={12}>
@@ -77,6 +111,7 @@ const About = () => {
 					</Grid>
 				</Grid>
 			</Container>
+			<DialogSkill isOpen={isDialogOpen} skill={skill} close={() => setIsDialogOpen(false)} />
 		</Element>
 	);
 };

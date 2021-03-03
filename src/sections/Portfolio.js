@@ -30,6 +30,10 @@ const useStyles = makeStyles({
 
 	linkImage: {
 		width: '100%'
+	},
+	linkWrapper: {
+		padding: '2rem',
+		textAlign: 'center'
 	}
 });
 
@@ -44,30 +48,45 @@ const Portfolio = () => {
 					</Typography>
 				</Grid>
 				<Grid container className={classes.wrapper}>
-					<Grid item xs={2}>
+					<Grid className={classes.linkWrapper} item xs={6} sm={4}>
 						<Link href="https://hub-invest.netlify.app/">
 							<img className={classes.linkImage} alt="hub-invest" src={invest} />
 						</Link>
+						<Typography variant="h5" color="primary">
+							InvestHub
+						</Typography>
 					</Grid>
-					<Grid item xs={2}>
+					<Grid className={classes.linkWrapper} item xs={6} sm={4}>
 						<Link href="https://mestre-cervejeiro.netlify.app/">
 							<img className={classes.linkImage} alt="mestre-cervejeiro" src={beer} />
 						</Link>
+						<Typography variant="h5" color="primary">
+							Mestre Cervejeiro
+						</Typography>
 					</Grid>
-					<Grid item xs={2}>
+					<Grid className={classes.linkWrapper} item xs={6} sm={4}>
 						<Link href="https://colorhabit.netlify.app/">
 							<img className={classes.linkImage} alt="color-picker" src={color} />
 						</Link>
+						<Typography variant="h5" color="primary">
+							ColorHabit
+						</Typography>
 					</Grid>
-					<Grid item xs={2}>
+					<Grid className={classes.linkWrapper} item xs={6} sm={4}>
 						<Link href="https://cloudgevity.netlify.app/">
 							<img className={classes.linkImage} alt="weather" src={weather} />
 						</Link>
+						<Typography variant="h5" color="primary">
+							Cloudgevity
+						</Typography>
 					</Grid>
-					<Grid item xs={2}>
+					<Grid className={classes.linkWrapper} item xs={6} sm={4}>
 						<Link href="https://tarot-oracle.netlify.app/">
 							<img className={classes.linkImage} alt="oracle" src={tarot} />
 						</Link>
+						<Typography variant="h5" color="primary">
+							Oracle
+						</Typography>
 					</Grid>
 				</Grid>
 			</Container>
