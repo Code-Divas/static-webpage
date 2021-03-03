@@ -9,7 +9,7 @@ const themeReducer = (state, action) => {
 	}
 };
 
-const changeTheme = (dispatch) => (language) => {
+const changeTheme = (dispatch) => (theme) => {
 	dispatch({ type: 'set_theme', payload: theme });
 };
 
