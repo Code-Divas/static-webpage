@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import logoGreen from '../assets/logoGreen.png';
 import Container from '@material-ui/core/Container';
 import { Element } from 'react-scroll';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
@@ -23,6 +24,14 @@ const useStyles = makeStyles({
 		flexDirection: 'row',
 		alignItems: 'center',
 		justifyContent: 'center'
+	},
+	image: {
+		width: '90%',
+		marginTop: '3rem',
+		alignSelf: 'center'
+	},
+	icon: {
+		marginRight: '1rem'
 	}
 });
 
@@ -32,23 +41,24 @@ const Contact = () => {
 		<Element id="contact">
 			<Container className={classes.container}>
 				<Grid item sm={12}>
-					<Typography paragraph variant="h4" color="primary">
+					<Typography paragraph variant="h4" color="secondary">
 						Contact
 					</Typography>
 				</Grid>
 
 				<Typography className={classes.wrapper} color="primary" variant="body1">
-					<WhatsAppIcon /> +5561981248555
+					<WhatsAppIcon className={classes.icon} color="secondary" /> +5561981248555
 				</Typography>
 				<Typography className={classes.wrapper} color="primary" variant="body1">
-					<EmailIcon /> alinemcsantoro@gmail.com
+					<EmailIcon className={classes.icon} color="secondary" /> alinemcsantoro@gmail.com
 				</Typography>
 				<Typography className={classes.wrapper} color="primary" variant="body1">
-					<LinkedInIcon /> @aline-santoro-88564a15b
+					<LinkedInIcon className={classes.icon} color="secondary" /> @aline-santoro-88564a15b
 				</Typography>
 				<Typography className={classes.wrapper} color="primary" variant="body1">
-					<GitHubIcon /> https://github.com/SantoroA
+					<GitHubIcon className={classes.icon} color="secondary" /> https://github.com/SantoroA
 				</Typography>
+				<img className={classes.image} src={logoGreen} alt="logo" />
 			</Container>
 		</Element>
 	);

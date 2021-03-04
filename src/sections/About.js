@@ -91,7 +91,8 @@ const About = () => {
 									setIsDialogOpen(true);
 									setSkill({
 										title: 'Fast Learner',
-										description: 'What takes other people months to learn, takes me weeks'
+										description:
+											'I have an excelent capacity to retain new things and an assimilate new ideas efficiently'
 									});
 								}}
 							>
@@ -112,7 +113,7 @@ const About = () => {
 						</div>
 					</Grid>
 					<Grid item sm={12}>
-						<Typography paragraph variant="h4" color="primary">
+						<Typography paragraph variant="h4" color="secondary">
 							About
 						</Typography>
 						<Typography paragraph variant="body1">

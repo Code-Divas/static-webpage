@@ -44,7 +44,7 @@ const Portfolio = () => {
 		<Element id="portfolio">
 			<Container className={classes.container}>
 				<Grid item sm={12}>
-					<Typography paragraph variant="h4" color="primary">
+					<Typography paragraph variant="h4" color="secondary">
 						Portfolio
 					</Typography>
 				</Grid>
@@ -55,7 +55,7 @@ const Portfolio = () => {
 								<img className={classes.linkImage} alt="hub-invest" src={invest} />
 							</Link>
 						</Tooltip>
-						<Typography variant="h5" color="primary">
+						<Typography variant="h5" color="secondary">
 							InvestHub
 						</Typography>
 					</Grid>
@@ -65,7 +65,7 @@ const Portfolio = () => {
 								<img className={classes.linkImage} alt="mestre-cervejeiro" src={beer} />
 							</Link>
 						</Tooltip>
-						<Typography variant="h5" color="primary">
+						<Typography variant="h5" color="secondary">
 							Mestre Cervejeiro
 						</Typography>
 					</Grid>
@@ -75,7 +75,7 @@ const Portfolio = () => {
 								<img className={classes.linkImage} alt="color-picker" src={color} />
 							</Link>
 						</Tooltip>
-						<Typography variant="h5" color="primary">
+						<Typography variant="h5" color="secondary">
 							ColorHabit
 						</Typography>
 					</Grid>
@@ -85,7 +85,7 @@ const Portfolio = () => {
 								<img className={classes.linkImage} alt="weather" src={weather} />
 							</Link>
 						</Tooltip>
-						<Typography variant="h5" color="primary">
+						<Typography variant="h5" color="secondary">
 							Cloudgevity
 						</Typography>
 					</Grid>
@@ -95,7 +95,7 @@ const Portfolio = () => {
 								<img className={classes.linkImage} alt="oracle" src={tarot} />
 							</Link>
 						</Tooltip>
-						<Typography variant="h5" color="primary">
+						<Typography variant="h5" color="secondary">
 							Oracle
 						</Typography>
 					</Grid>

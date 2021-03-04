@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	link: {
 		marginRight: 10,
+		color: '#2C0F2C',
 		marginLeft: 10,
 		'&:hover': {
 			cursor: 'pointer'
