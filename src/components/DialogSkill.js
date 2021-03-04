@@ -1,29 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
-import Dialog from '@material-ui/core/Dialog';
+import IconButton from '@material-ui/core/IconButton';
 
 const useStyles = makeStyles({
 	container: {
-		padding: '2rem'
+		padding: '1rem',
+		borderRadius: '10px',
+		backgroundColor: 'white'
 	}
 });
 
-const DialogSkill = ({ isOpen, close, skill }) => {
+const DialogSkill = ({ skill, icon }) => {
 	const classes = useStyles();
+	const [ isOpen, setIsOpen ] = useState(false);
 
 	return (
-		<Dialog open={isOpen} onClose={close}>
-			<div className={classes.container}>
-				<Typography color="primary" paragraph variant="h4">
-					{skill.title}
-				</Typography>
-				<Typography paragraph variant="subtitle1">
-					{skill.description}
-				</Typography>
-			</div>
-		</Dialog>
+		<div>
+			{isOpen ? (
+				<div onMouseLeave={() => setIsOpen(false)} className={classes.container}>
+					<Typography color="primary" paragraph variant="h5">
+						{skill.title}
+					</Typography>
+					<Typography paragraph variant="subtitle1">
+						{skill.description}
+					</Typography>
+				</div>
+			) : (
+				<IconButton onMouseEnter={() => setIsOpen(true)}>{icon}</IconButton>
+			)}
+		</div>
 	);
 };
 

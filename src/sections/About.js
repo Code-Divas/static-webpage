@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
-import IconButton from '@material-ui/core/IconButton';
 import picture from '../assets/picture.jpg';
 import { Element } from 'react-scroll';
 import DialogSkill from '../components/DialogSkill';
@@ -48,68 +47,50 @@ const useStyles = makeStyles({
 
 const About = () => {
 	const classes = useStyles();
-	const [ isDialogOpen, setIsDialogOpen ] = useState(false);
-	const [ skill, setSkill ] = useState({});
+
 	return (
 		<Element id="about">
 			<Container className={classes.container}>
 				<Grid container className={classes.wrapper}>
-					<Grid item sm={6} xs={12} className={classes.picContainer}>
+					<Grid item sm={5} xs={12} className={classes.picContainer}>
 						<img className={classes.picture} src={picture} alt="aline" />
 					</Grid>
-					<Grid item sm={6} xs={12} className={classes.section}>
-						<Typography>(Click to see more!)</Typography>
+					<Grid item sm={7} xs={12} className={classes.section}>
+						<Typography>(Hover to see more!)</Typography>
 						<div className={classes.iconWrapper}>
-							<IconButton
-								onClick={() => {
-									setIsDialogOpen(true);
-									setSkill({
-										title: 'Problem Solver',
-										description:
-											'I have an aptitude for creative and effective, sometimes out-of-the-box, solutions'
-									});
+							<DialogSkill
+								skill={{
+									title: 'Problem Solver',
+									description:
+										'I have an aptitude for creative and effective, sometimes out-of-the-box, solutions'
 								}}
-							>
-								<ReportProblemIcon className={classes.icon} color="primary" />
-							</IconButton>
-							<IconButton
-								onClick={() => {
-									setIsDialogOpen(true);
-									setSkill({
-										title: 'Global Perspective',
-										description:
-											'Having experienced many different cultures, I can think about a situation as it relates to the rest of the world'
-									});
+								icon={<ReportProblemIcon className={classes.icon} color="primary" />}
+							/>
+							<DialogSkill
+								skill={{
+									title: 'Global Perspective',
+									description:
+										'Having experienced many different cultures, I can think about a situation as it relates to the rest of the world'
 								}}
-							>
-								<PublicIcon className={classes.icon} color="primary" />
-							</IconButton>
+								icon={<PublicIcon className={classes.icon} color="primary" />}
+							/>
 						</div>
 						<div className={classes.iconWrapper}>
-							<IconButton
-								onClick={() => {
-									setIsDialogOpen(true);
-									setSkill({
-										title: 'Fast Learner',
-										description:
-											'I have an excelent capacity to retain new things and an assimilate new ideas efficiently'
-									});
+							<DialogSkill
+								skill={{
+									title: 'Fast Learner',
+									description:
+										'I have an excelent capacity to retain new things and an assimilate new ideas efficiently'
 								}}
-							>
-								<MenuBookIcon className={classes.icon} color="primary" />
-							</IconButton>
-							<IconButton
-								onClick={() => {
-									setIsDialogOpen(true);
-									setSkill({
-										title: 'Proactive',
-										description:
-											"I don't sit back and wait for things to happen, I make them happen"
-									});
+								icon={<MenuBookIcon className={classes.icon} color="primary" />}
+							/>
+							<DialogSkill
+								skill={{
+									title: 'Proactive',
+									description: "I don't sit back and wait for things to happen, I make them happen"
 								}}
-							>
-								<DirectionsRunIcon className={classes.icon} color="primary" />
-							</IconButton>
+								icon={<DirectionsRunIcon className={classes.icon} color="primary" />}
+							/>
 						</div>
 					</Grid>
 					<Grid item sm={12}>
@@ -127,7 +108,6 @@ const About = () => {
 					</Grid>
 				</Grid>
 			</Container>
-			<DialogSkill isOpen={isDialogOpen} skill={skill} close={() => setIsDialogOpen(false)} />
 		</Element>
 	);
 };
