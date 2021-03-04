@@ -39,8 +39,6 @@ export default function Navbar() {
 	const [ lang, setLang ] = useState(i18n.language);
 	const classes = useStyles();
 
-	console.log(i18n);
-
 	const handleChange = (event) => {
 		i18n.changeLanguage(event.target.value);
 		setLang(event.target.value);
