@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-scroll';
+import FlagBr from '../custonIcons/FlagBr';
+import FlagUk from '../custonIcons/FlagUk';
 import 'fontsource-josefin-sans';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
 	toolbar: {
 		justifyContent: 'center'
 	},
@@ -17,15 +23,27 @@ const useStyles = makeStyles((theme) => ({
 			cursor: 'pointer'
 		},
 		fontSize: '1.3rem'
+	},
+	countrySelect: {
+		width: '3rem',
+		marginRight: '1rem',
+		alignItems: 'center'
+	},
+	formControl: {
+		marginLeft: '1rem'
 	}
-}));
+});
 
 export default function Navbar() {
+	const [ lang, setLang ] = useState('en_UK');
 	const classes = useStyles();
-
-	// const scrollToTop = () => {
-	// 	scroll.scrollToTop();
-	// };
+	const { i18n, t } = useTranslation();
+	const handleClick = (lang) => {
+		i18n.changeLanguage(lang);
+	};
+	const handleChange = (event) => {
+		setLang(event.target.value);
+	};
 	return (
 		<AppBar color="primary" position="fixed">
 			<Toolbar className={classes.toolbar}>
@@ -51,7 +69,7 @@ export default function Navbar() {
 					duration={500}
 					className={classes.link}
 				>
-					About
+					{t('ABOUT.2')}
 				</Link>
 				<Link
 					activeClass="active"
@@ -65,8 +83,17 @@ export default function Navbar() {
 				>
 					Portfolio
 				</Link>
+				<FormControl className={classes.formControl}>
+					<Select className={classes.countrySelect} disableUnderline value={lang} onChange={handleChange}>
+						<MenuItem value={'en_UK'} onClick={() => handleClick('en')}>
+							<FlagUk />
+						</MenuItem>
 
-				{/* <Typography>Hello</Typography> */}
+						<MenuItem value={'pt_BR'} onClick={() => handleClick('pt')}>
+							<FlagBr />
+						</MenuItem>
+					</Select>
+				</FormControl>
 			</Toolbar>
 		</AppBar>
 	);

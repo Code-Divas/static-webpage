@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import { useTranslation } from 'react-i18next';
 import Container from '@material-ui/core/Container';
 import { Element } from 'react-scroll';
 
@@ -32,12 +33,13 @@ const useStyles = makeStyles({
 
 const About = () => {
 	const classes = useStyles();
+	const { t } = useTranslation();
 	return (
 		<Element id="contact">
 			<Container className={classes.container}>
 				<Grid item sm={12}>
 					<Typography paragraph variant="h4" color="secondary">
-						About
+						{t('ABOUT.1')}
 					</Typography>
 					<Typography paragraph variant="body1">
 						I’m currently assigned as Team Leader and Front-end React Developer in a healthcare startup,

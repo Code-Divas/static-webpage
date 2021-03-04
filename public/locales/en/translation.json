@@ -1,0 +1,384 @@
+{
+	"SOFT_SKILLS": {
+		"1": "Soft Skills"
+	},
+	"HOVER": {
+		"1": "Hover to see more!"
+	},
+	"FAST_LEARNER": {
+		"1": "Fast Learner",
+		"2": "I have an excelent capacity to retain new things and an assimilate new ideas efficiently"
+	},
+	"GOOD_COMMUNICATION": {
+		"1": "Good Communication",
+		"2": "Strong written and oral skills, ability to listen and ask the right questions"
+	},
+	"PROACTIVE": {
+		"1": "Proactive!",
+		"2": "I don't sit back and wait for things to happen, I make them happen"
+	},
+	"PROBLEM_SOLVER": {
+		"1": "Problem Solver",
+		"2": "I have an aptitude for creative and effective, sometimes out-of-the-box, solutions"
+	},
+	"GLOBAL_PERSPECTIVE": {
+		"1": "Global Perspective",
+		"2": "Having experienced many different cultures, I can think about a situation as it relates to the rest of the world"
+	},
+	"POLYGLOT": {
+		"1": "Polyglot",
+		"2": "Native English, Native Portuguese and Intermediate Italian"
+	},
+	"ABOUT": {
+		"1": "About me",
+		"2": "About"
+	},
+	"My_Appointments": {
+		"1": "My Appointments"
+	},
+	"My_Patients": {
+		"1": "My Patients"
+	},
+	"My_Earnings": {
+		"1": "My Earnings"
+	},
+	"Availability": {
+		"1": "Availability"
+	},
+	"Showing_appointment_for": {
+		"1": "SHOWING APPOINTMENT FOR"
+	},
+	"Something_wrong": {
+		"1": "Something went wrong, please try again later"
+	},
+	"Service_Availability": {
+		"1": "Service Availability"
+	},
+	"Availability_from": {
+		"1": "Availability from"
+	},
+	"Availability_to": {
+		"1": "Availability to"
+	},
+	"Sun": {
+		"1": "Sun"
+	},
+	"Mon": {
+		"1": "Mon"
+	},
+	"Tue": {
+		"1": "Tue"
+	},
+	"Wed": {
+		"1": "Wed"
+	},
+	"Thu": {
+		"1": "Thu"
+	},
+	"Fri": {
+		"1": "Fri"
+	},
+	"Sat": {
+		"1": "Sat"
+	},
+	"Time_slots_Sunday": {
+		"1": "Time Slots for Sunday"
+	},
+	"Time_slots_Monday": {
+		"1": "Time Slots for Monday"
+	},
+	"Time_slots_Tuesday": {
+		"1": "Time Slots for Tuesday"
+	},
+	"Time_slots_Wednesday": {
+		"1": "Time Slots for Wednesday"
+	},
+	"Time_slots_Thursday": {
+		"1": "Time Slots for Thursday"
+	},
+	"Time_slots_Friday": {
+		"1": "Time Slots for Friday"
+	},
+	"Time_slots_Saturday": {
+		"1": "Time Slots for Saturday"
+	},
+	"Time_from": {
+		"1": "Time from"
+	},
+	"Time_to": {
+		"1": "Time to"
+	},
+	"Slot_Duration": {
+		"1": "Slot Duration"
+	},
+	"Min": {
+		"1": "min"
+	},
+	"Hour": {
+		"1": "hour"
+	},
+	"Amount": {
+		"1": "Amount"
+	},
+	"Apply": {
+		"1": "Apply"
+	},
+	"Patient_Name": {
+		"1": "Patient Name"
+	},
+	"COMPANY": {
+		"1": "COMPANY"
+	},
+	"THERMS_OF_SERVICE": {
+		"1": "Terms od Service"
+	},
+	"PRIVACY_POLICY": {
+		"1": "Privacy Policy"
+	},
+	"COOKIE_POLICY": {
+		"1": "Cookie Policy"
+	},
+	"CANCELLATION": {
+		"1": "Cancellation & Refund Policy"
+	},
+	"SIGN_IN_AS_DOCTOR": {
+		"1": "Sign in as Doctor"
+	},
+	"MEMBERSHIP": {
+		"1": "Membership"
+	},
+	"TOOLS": {
+		"1": "Tools"
+	},
+	"PODCASTS": {
+		"1": "PODCASTS"
+	},
+	"ABOUT_US": {
+		"1": "About us"
+	},
+	"DIANURSE_BLOG": {
+		"1": "Dianurse Blog"
+	},
+	"CAREERS": {
+		"1": "Careers"
+	},
+	"CONTACT_US": {
+		"1": "Contact us"
+	},
+	"HELP_CENTER": {
+		"1": "Help center & FAQs"
+	},
+	"EMAIL": {
+		"1": "Email:"
+	},
+	"PRODUCTS": {
+		"1": "PRODUCTS"
+	},
+	"APPLE": {
+		"1": "Apple"
+	},
+	"BREAKER": {
+		"1": "Breaker"
+	},
+	"GOOGLE": {
+		"1": "Google"
+	},
+	"SPOTIFY": {
+		"1": "Spotify"
+	},
+	"RADIOPUBLIC": {
+		"1": "RadioPublic"
+	},
+	"FOOTER_DESC": {
+		"1": "The telemedicine services made available through Dianurse are provided by licensed physicians practicing within a group of independently owned professional practices collectively known as “Dianurse Professionals”. These professional practices provide services via the Dianurse telehealth platform. Dianurse does not itself provide any physician, mental health or other healthcare provider services."
+	},
+	"MY_PROFILE": {
+		"1": "My Profile"
+	},
+	"GENERAL_INFORMATION": {
+		"1": "General Information"
+	},
+	"ABOUT_ME": {
+		"1": "About me"
+	},
+	"DOCUMENTS": {
+		"1": "Documents"
+	},
+	"PRESCRIPTIONS": {
+		"1": "Prescriptions"
+	},
+	"LAB_TESTS": {
+		"1": "Lab Tests"
+	},
+	"SURVEYS": {
+		"1": "Surveys"
+	},
+	"Back_to_profile": {
+		"1": "Back to my profile"
+	},
+	"Name_and_specialty": {
+		"1": "Name and specialty must be filled to appear in searches"
+	},
+	"Email_and_password": {
+		"1": "Email and Password"
+	},
+	"Change_my_password": {
+		"1": "Change my password"
+	},
+	"Change_your_password": {
+		"1": "Change your password"
+	},
+	"Old_password": {
+		"1": "Old Password"
+	},
+	"New_password": {
+		"1": "New Password"
+	},
+	"Confirm_password": {
+		"1": "Confirm Password"
+	},
+	"Cancel": {
+		"1": "Cancel"
+	},
+	"Update": {
+		"1": "Update"
+	},
+	"Contact_information": {
+		"1": "Contact Information"
+	},
+	"Profile": {
+		"1": "Profile"
+	},
+	"Add_information_about": {
+		"1": "Add information about your clinical practice"
+	},
+	"Website_Url": {
+		"1": "Website Url"
+	},
+	"Experience": {
+		"1": "Experience"
+	},
+	"Years_of_experience": {
+		"1": "Years of experience"
+	},
+	"Years_as_specialist": {
+		"1": "Years as a specialist"
+	},
+	"Education": {
+		"1": "Education"
+	},
+	"Information_about_studies": {
+		"1": "Add information about your studies"
+	},
+	"Location": {
+		"1": "Location"
+	},
+	"Country": {
+		"1": "Country"
+	},
+	"City": {
+		"1": "City"
+	},
+	"Zip_Code": {
+		"1": "Zip Code"
+	},
+	"Street": {
+		"1": "Street"
+	},
+	"Apt/Suite/Door": {
+		"1": "Apt/Suite/Door"
+	},
+	"First_Name": {
+		"1": "First name"
+	},
+	"Last_Name": {
+		"1": "Last name"
+	},
+	"Specialty": {
+		"1": "Specialty"
+	},
+	"Gender": {
+		"1": "Gender"
+	},
+	"Male": {
+		"1": "Male"
+	},
+	"Female": {
+		"1": "Female"
+	},
+	"Other": {
+		"1": "Other"
+	},
+	"Prefer_not_to_say": {
+		"1": "Prefer not to say"
+	},
+	"Birthday": {
+		"1": "Birthday"
+	},
+	"Place_of_Birth": {
+		"1": "Place of Birth"
+	},
+	"Search_Doctor": {
+		"1": "Search for a Doctor"
+	},
+	"Meet_assistant": {
+		"1": "Meet the assistant"
+	},
+	"Doctor": {
+		"1": "Doctor"
+	},
+	"Upload_new_document": {
+		"1": "Upload new document"
+	},
+	"Doctor_Name": {
+		"1": "Doctor Name"
+	},
+	"Date": {
+		"1": "Date"
+	},
+	"Appointment_Time": {
+		"1": "Appointment Time"
+	},
+	"Patient_comments": {
+		"1": "Patient comments"
+	},
+	"Document_Status": {
+		"1": "Document Status"
+	},
+	"Save_time": {
+		"1": "Save time! Documents uploaded to your doctor will appear here."
+	},
+	"No_documents_added": {
+		"1": "No Documents Added"
+	},
+	"Here_you_will_see_prescriptions": {
+		"1": "Here you will see your prescriptions and health recommendations"
+	},
+	"No_Prescriptions_Added": {
+		"1": "No Prescriptions Added"
+	},
+	"Here_you_will_see_LabTests": {
+		"1": "Here you will see your lab tests results."
+	},
+	"No_LabTests_Added": {
+		"1": "No Lab tests Added"
+	},
+	"Upload_results": {
+		"1": "Upload results"
+	},
+	"Doctor_comments": {
+		"1": "Doctor comments"
+	},
+	"Here_you_will_see_surveys": {
+		"1": "Here you will see questionnaries and surveys from your doctor."
+	},
+	"No_Surveys_Added": {
+		"1": "No Surveys Added"
+	},
+	"Take_Survey": {
+		"1": "Take Survey"
+	},
+	"View": {
+		"1": "View"
+	}
+}

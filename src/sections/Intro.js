@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import picture from '../assets/picture.jpg';
-
+import { useTranslation } from 'react-i18next';
 import { Element } from 'react-scroll';
 import WbIncandescentIcon from '@material-ui/icons/WbIncandescent';
 import DialogSkill from '../components/DialogSkill';
@@ -68,7 +68,7 @@ const useStyles = makeStyles({
 
 const Intro = () => {
 	const classes = useStyles();
-
+	const { t } = useTranslation();
 	return (
 		<Element id="about">
 			<Container className={classes.container}>
@@ -109,31 +109,29 @@ const Intro = () => {
 						</Link>
 					</Grid>
 					<Typography paragraph variant="h4" color="secondary">
-						Soft Skills
+						{t('SOFT_SKILLS.1')}
 					</Typography>
 					<Grid item xs={12} className={classes.section}>
-						<Typography>(Hover to see more!)</Typography>
+						<Typography>({t('HOVER.1')})</Typography>
 						<div className={classes.iconWrapper}>
 							<DialogSkill
 								skill={{
-									title: 'Fast Learner',
-									description:
-										'I have an excelent capacity to retain new things and an assimilate new ideas efficiently'
+									title: `${t('FAST_LEARNER.1')}`,
+									description: `${t('FAST_LEARNER.2')}`
 								}}
 								icon={<MenuBookIcon className={classes.icon} color="secondary" />}
 							/>
 							<DialogSkill
 								skill={{
-									title: 'Good Communication',
-									description:
-										'Strong written and oral skills, ability to listen and ask the right questions'
+									title: `${t('GOOD_COMMUNICATION.1')}`,
+									description: `${t('GOOD_COMMUNICATION.2')}`
 								}}
 								icon={<WbIncandescentIcon className={classes.icon} color="primary" />}
 							/>
 							<DialogSkill
 								skill={{
-									title: 'Proactive',
-									description: "I don't sit back and wait for things to happen, I make them happen"
+									title: `${t('PROACTIVE.1')}`,
+									description: `${t('PROACTIVE.2')}`
 								}}
 								icon={<DirectionsRunIcon className={classes.icon} color="secondary" />}
 							/>
@@ -141,24 +139,22 @@ const Intro = () => {
 						<div className={classes.iconWrapper}>
 							<DialogSkill
 								skill={{
-									title: 'Problem Solver',
-									description:
-										'I have an aptitude for creative and effective, sometimes out-of-the-box, solutions'
+									title: `${t('PROBLEM_SOLVER.1')}`,
+									description: `${t('PROBLEM_SOLVER.2')}`
 								}}
 								icon={<ReportProblemIcon className={classes.icon} color="primary" />}
 							/>
 							<DialogSkill
 								skill={{
-									title: 'Global Perspective',
-									description:
-										'Having experienced many different cultures, I can think about a situation as it relates to the rest of the world'
+									title: `${t('GLOBAL_PERSPECTIVE.1')}`,
+									description: `${t('GLOBAL_PERSPECTIVE.2')}`
 								}}
 								icon={<PublicIcon className={classes.icon} color="secondary" />}
 							/>
 							<DialogSkill
 								skill={{
-									title: 'Polyglot',
-									description: 'Native English, Native Portuguese and Intermediate Italian'
+									title: `${t('POLYGLOT.1')}`,
+									description: `${t('POLYGLOT.2')}`
 								}}
 								icon={<LanguageIcon className={classes.icon} color="primary" />}
 							/>
