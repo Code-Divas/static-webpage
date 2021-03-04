@@ -49,7 +49,7 @@ const useStyles = makeStyles({
 const About = () => {
 	const classes = useStyles();
 	const [ isDialogOpen, setIsDialogOpen ] = useState(false);
-	const [ skill, setSkill ] = useState('');
+	const [ skill, setSkill ] = useState({});
 	return (
 		<Element id="about">
 			<Container className={classes.container}>
@@ -63,7 +63,11 @@ const About = () => {
 							<IconButton
 								onClick={() => {
 									setIsDialogOpen(true);
-									setSkill('Problem Solver');
+									setSkill({
+										title: 'Problem Solver',
+										description:
+											'I have an aptitude for creative and effective, sometimes out-of-the-box, solutions'
+									});
 								}}
 							>
 								<ReportProblemIcon className={classes.icon} color="primary" />
@@ -71,7 +75,11 @@ const About = () => {
 							<IconButton
 								onClick={() => {
 									setIsDialogOpen(true);
-									setSkill('Global Perspective');
+									setSkill({
+										title: 'Global Perspective',
+										description:
+											'Having experienced many different cultures, I can think about a situation as it relates to the rest of the world'
+									});
 								}}
 							>
 								<PublicIcon className={classes.icon} color="primary" />
@@ -81,7 +89,10 @@ const About = () => {
 							<IconButton
 								onClick={() => {
 									setIsDialogOpen(true);
-									setSkill('Fast Learner');
+									setSkill({
+										title: 'Fast Learner',
+										description: 'What takes other people months to learn, takes me weeks'
+									});
 								}}
 							>
 								<MenuBookIcon className={classes.icon} color="primary" />
@@ -89,7 +100,11 @@ const About = () => {
 							<IconButton
 								onClick={() => {
 									setIsDialogOpen(true);
-									setSkill('Proactive');
+									setSkill({
+										title: 'Proactive',
+										description:
+											"I don't sit back and wait for things to happen, I make them happen"
+									});
 								}}
 							>
 								<DirectionsRunIcon className={classes.icon} color="primary" />

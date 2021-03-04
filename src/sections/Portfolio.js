@@ -10,6 +10,7 @@ import invest from '../assets/invest.svg';
 import tarot from '../assets/tarot.svg';
 
 import Grid from '@material-ui/core/Grid';
+import Tooltip from '@material-ui/core/Tooltip';
 import { Element } from 'react-scroll';
 
 const useStyles = makeStyles({
@@ -24,7 +25,7 @@ const useStyles = makeStyles({
 		display: 'flex',
 		marginTop: '2rem',
 		flexDirection: 'row',
-		alignItems: 'center',
+		alignItems: 'flex-end',
 		justifyContent: 'space-around'
 	},
 
@@ -49,41 +50,51 @@ const Portfolio = () => {
 				</Grid>
 				<Grid container className={classes.wrapper}>
 					<Grid className={classes.linkWrapper} item xs={6} sm={4}>
-						<Link href="https://hub-invest.netlify.app/">
-							<img className={classes.linkImage} alt="hub-invest" src={invest} />
-						</Link>
+						<Tooltip title="Investment education app for Orama Hackathon">
+							<Link href="https://hub-invest.netlify.app/">
+								<img className={classes.linkImage} alt="hub-invest" src={invest} />
+							</Link>
+						</Tooltip>
 						<Typography variant="h5" color="primary">
 							InvestHub
 						</Typography>
 					</Grid>
 					<Grid className={classes.linkWrapper} item xs={6} sm={4}>
-						<Link href="https://mestre-cervejeiro.netlify.app/">
-							<img className={classes.linkImage} alt="mestre-cervejeiro" src={beer} />
-						</Link>
+						<Tooltip title="Craft beer game for Ambev Hackathon">
+							<Link href="https://mestre-cervejeiro.netlify.app/">
+								<img className={classes.linkImage} alt="mestre-cervejeiro" src={beer} />
+							</Link>
+						</Tooltip>
 						<Typography variant="h5" color="primary">
 							Mestre Cervejeiro
 						</Typography>
 					</Grid>
 					<Grid className={classes.linkWrapper} item xs={6} sm={4}>
-						<Link href="https://colorhabit.netlify.app/">
-							<img className={classes.linkImage} alt="color-picker" src={color} />
-						</Link>
+						<Tooltip title="Color pallete creator">
+							<Link href="https://colorhabit.netlify.app/">
+								<img className={classes.linkImage} alt="color-picker" src={color} />
+							</Link>
+						</Tooltip>
 						<Typography variant="h5" color="primary">
 							ColorHabit
 						</Typography>
 					</Grid>
 					<Grid className={classes.linkWrapper} item xs={6} sm={4}>
-						<Link href="https://cloudgevity.netlify.app/">
-							<img className={classes.linkImage} alt="weather" src={weather} />
-						</Link>
+						<Tooltip title="Weather App">
+							<Link href="https://cloudgevity.netlify.app/">
+								<img className={classes.linkImage} alt="weather" src={weather} />
+							</Link>
+						</Tooltip>
 						<Typography variant="h5" color="primary">
 							Cloudgevity
 						</Typography>
 					</Grid>
 					<Grid className={classes.linkWrapper} item xs={6} sm={4}>
-						<Link href="https://tarot-oracle.netlify.app/">
-							<img className={classes.linkImage} alt="oracle" src={tarot} />
-						</Link>
+						<Tooltip title="Tarot app">
+							<Link href="https://tarot-oracle.netlify.app/">
+								<img className={classes.linkImage} alt="oracle" src={tarot} />
+							</Link>
+						</Tooltip>
 						<Typography variant="h5" color="primary">
 							Oracle
 						</Typography>

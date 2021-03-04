@@ -16,7 +16,12 @@ const DialogSkill = ({ isOpen, close, skill }) => {
 	return (
 		<Dialog open={isOpen} onClose={close}>
 			<div className={classes.container}>
-				<Typography variant="h5">{skill}</Typography>
+				<Typography color="primary" paragraph variant="h4">
+					{skill.title}
+				</Typography>
+				<Typography paragraph variant="subtitle1">
+					{skill.description}
+				</Typography>
 			</div>
 		</Dialog>
 	);
