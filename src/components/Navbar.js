@@ -35,13 +35,14 @@ const useStyles = makeStyles({
 });
 
 export default function Navbar() {
-	const [ lang, setLang ] = useState('en_UK');
-	const classes = useStyles();
 	const { i18n, t } = useTranslation();
-	const handleClick = (lang) => {
-		i18n.changeLanguage(lang);
-	};
+	const [ lang, setLang ] = useState(i18n.language);
+	const classes = useStyles();
+
+	console.log(i18n);
+
 	const handleChange = (event) => {
+		i18n.changeLanguage(event.target.value);
 		setLang(event.target.value);
 	};
 	return (
@@ -85,11 +86,11 @@ export default function Navbar() {
 				</Link>
 				<FormControl className={classes.formControl}>
 					<Select className={classes.countrySelect} disableUnderline value={lang} onChange={handleChange}>
-						<MenuItem value={'en_UK'} onClick={() => handleClick('en')}>
+						<MenuItem value={'en'}>
 							<FlagUk />
 						</MenuItem>
 
-						<MenuItem value={'pt_BR'} onClick={() => handleClick('pt')}>
+						<MenuItem value={'pt'}>
 							<FlagBr />
 						</MenuItem>
 					</Select>
