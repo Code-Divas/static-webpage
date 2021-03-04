@@ -20,12 +20,10 @@ const DialogSkill = ({ skill, icon }) => {
 		<div>
 			{isOpen ? (
 				<div onMouseLeave={() => setIsOpen(false)} className={classes.container}>
-					<Typography color="primary" paragraph variant="h5">
+					<Typography color="primary" variant="h5">
 						{skill.title}
 					</Typography>
-					<Typography paragraph variant="subtitle1">
-						{skill.description}
-					</Typography>
+					<Typography variant="subtitle1">{skill.description}</Typography>
 				</div>
 			) : (
 				<IconButton onMouseEnter={() => setIsOpen(true)}>{icon}</IconButton>

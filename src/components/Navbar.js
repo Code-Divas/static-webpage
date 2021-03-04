@@ -39,6 +39,18 @@ export default function Navbar() {
 					duration={500}
 					className={classes.link}
 				>
+					Intro
+				</Link>
+				<Link
+					activeClass="active"
+					to="contact"
+					spy={true}
+					smooth={true}
+					style={{ fontFamily: 'Josefin Sans' }}
+					offset={-70}
+					duration={500}
+					className={classes.link}
+				>
 					About
 				</Link>
 				<Link
@@ -52,18 +64,6 @@ export default function Navbar() {
 					className={classes.link}
 				>
 					Portfolio
-				</Link>
-				<Link
-					activeClass="active"
-					to="contact"
-					spy={true}
-					smooth={true}
-					style={{ fontFamily: 'Josefin Sans' }}
-					offset={-70}
-					duration={500}
-					className={classes.link}
-				>
-					Contact
 				</Link>
 
 				{/* <Typography>Hello</Typography> */}

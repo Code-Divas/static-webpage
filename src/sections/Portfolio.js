@@ -8,7 +8,7 @@ import color from '../assets/color.svg';
 import weather from '../assets/weather.svg';
 import invest from '../assets/invest.svg';
 import tarot from '../assets/tarot.svg';
-
+import logoGreen from '../assets/logoGreen.png';
 import Grid from '@material-ui/core/Grid';
 import Tooltip from '@material-ui/core/Tooltip';
 import { Element } from 'react-scroll';
@@ -26,7 +26,8 @@ const useStyles = makeStyles({
 		marginTop: '2rem',
 		flexDirection: 'row',
 		alignItems: 'flex-end',
-		justifyContent: 'space-around'
+		justifyContent: 'space-around',
+		marginBottom: '2rem'
 	},
 
 	linkImage: {
@@ -35,6 +36,9 @@ const useStyles = makeStyles({
 	linkWrapper: {
 		padding: '2rem',
 		textAlign: 'center'
+	},
+	image: {
+		width: '100%'
 	}
 });
 
@@ -100,6 +104,8 @@ const Portfolio = () => {
 						</Typography>
 					</Grid>
 				</Grid>
+
+				<img className={classes.image} src={logoGreen} alt="logo" />
 			</Container>
 		</Element>
 	);

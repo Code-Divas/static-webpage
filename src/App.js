@@ -1,7 +1,7 @@
 import React from 'react';
 import Portfolio from './sections/Portfolio';
+import Intro from './sections/Intro';
 import About from './sections/About';
-import Contact from './sections/Contact';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { Provider as ThemeSelectProvider } from './context/ThemeContext';
 import Layout from './Layout';
@@ -26,9 +26,9 @@ const App = () => {
 		<ThemeSelectProvider>
 			<ThemeProvider theme={theme}>
 				<Layout>
+					<Intro />
 					<About />
 					<Portfolio />
-					<Contact />
 				</Layout>
 			</ThemeProvider>
 		</ThemeSelectProvider>
